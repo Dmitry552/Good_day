@@ -6,16 +6,18 @@
 
 var money = {
   Sergey: 2000,
-  Vitalya: 10000,
+  Vitalya: 1000,
   Sveta: 30,
-  Vika: 1000,
-  Tolya: 20
+  Vika: 3000,
+  Tolya: 10
 };
 
 if(money) {
+  var f = 0;
   for(var zp in money) {
-    console.log('Имя: ' + zp + ' Зароботная плата: ' + money[zp] + '<br\/>');
+    f += money[zp];
   }
+  console.log('Зароботная плата сотрудников: ' + f);
 }
 
 /* Задание № 2
@@ -35,12 +37,12 @@ if(money) {
   }
   console.log('Лучше всех работает: ' + name_max + ' ему(ей) платят: ' + a);
   for(var zl in money) {
-    if(a < money[zl]) {
+    if(a > money[zl]) {
       a = money[zl];
       name_min = zl;
     }
   }
-  console.log('<br\/>Хуже всех работает: ' + name_min + ' ему(ей) платят: ' + a);
+  console.log('Хуже всех работает: ' + name_min + ' ему(ей) платят: ' + a);
 }
 
 /* Задача № 3
